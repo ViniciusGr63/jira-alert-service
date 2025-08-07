@@ -1,0 +1,54 @@
+# Dependências do projeto
+
+# 1. fastapi
+# O que é?
+# Um framework para criar APIs REST com Python.
+# Para que serve?
+# Facilita a criação de endpoints HTTP com validação automática de dados, documentação integrada (Swagger), e suporte async.
+# No seu projeto:
+# Serve como base para criar o servidor web que recebe alertas e expõe APIs.
+
+# 2. uvicorn
+# O que é?
+# Um servidor ASGI (Async Server Gateway Interface) ultra rápido para rodar apps Python async, como FastAPI e Starlette.
+# Para que serve?
+# Ele é o servidor que executa seu app FastAPI e aceita requisições HTTP.
+# No seu projeto:
+# Usado para rodar o serviço localmente (uvicorn app.main:app --reload).
+# 3. requests
+# O que é?
+# Biblioteca para fazer requisições HTTP de forma simples e elegante em Python.
+# Para que serve?
+# Permite consumir APIs externas, fazer POST, GET, etc. com poucos comandos.
+# No seu projeto:
+# Usado para chamar a API do Jira e o webhook do Slack.
+# 4. python-dotenv
+# O que é?
+# Biblioteca para carregar variáveis de ambiente a partir de arquivos .env.
+# Para que serve?
+# Facilita a configuração de variáveis sensíveis (tokens, URLs) sem deixar hardcoded no código.
+# No seu projeto:
+# Carrega as credenciais do Jira e Slack do arquivo .env.
+# 5. loguru
+# O que é?
+# Biblioteca moderna para logging (registro de logs) em Python, mais simples e poderosa que o módulo padrão logging.
+# Para que serve?
+# Facilita gerar logs organizados, com rotação de arquivos, níveis de severidade e formatos.
+# No seu projeto:
+# Registra informações, erros e ajuda a monitorar o comportamento do serviço.
+# 6. prometheus_client
+# O que é?
+# Biblioteca cliente oficial para criar métricas no formato Prometheus.
+# Para que serve?
+# Permite expor contadores, gauges e outras métricas para ferramentas de monitoramento, ajudando a observar a saúde do app.
+# No seu projeto:
+# Usada para contar requisições e erros, que podem ser visualizados no endpoint /metrics.
+
+
+#execultar pip install -r requirements.txt
+fastapi
+uvicorn
+requests
+python-dotenv
+loguru
+prometheus_client
